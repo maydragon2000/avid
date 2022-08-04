@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  font-family: "Source Sans Pro", sans-serif !important;
+  overflow: hidden;
+}
+
+h1,
+a {
+  font-family: "Futura Std Book" !important;
+}
+
+.landing-intro > :not(nav), #root > div > div:not(.landing-intro) {
+  filter: saturate(105%) brightness(105%);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.constrain {
+  /* width: calc(100% - 30px); */
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.btn {
+  @apply rounded-full relative cursor-pointer font-bold px-6 py-2.5 text-base;
+}
+
+.btn:hover {
+  @apply shadow-lg;
+}
+
+.btn:active {
+  filter: brightness(95%);
+}
+
+.btn-large {
+  @apply px-8 py-4 text-lg inline-block;
+}
+.nav-scroll {
+  @apply bg-white shadow-xl;
+}
+
+.nav-scroll ul li {
+  @apply text-blue-500;
+}
+
+.nav-scroll .btn {
+  @apply bg-blue-500 text-white;
+}
+
+.nav-scroll img {
+  filter: brightness(0) saturate(100%) invert(44%) sepia(88%) saturate(2687%) hue-rotate(202deg) brightness(100%) contrast(94%);
+} 
+
+#disclosures * {
+  @apply text-xs sm:text-sm !important;
+}
